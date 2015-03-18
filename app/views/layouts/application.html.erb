@@ -8,7 +8,22 @@
 </head>
 <body>
 
-<%= yield %>
+<div class="container"><!-- Start Nav Containter-->
+  <ul class="nav nav-tabs">
+      <li><%= link_to "home", root_path %></li>
+      <li><%= link_to "About", welcome_about_path %></li>
+      <li><%= link_to "Features", welcome_features_path %></li>
+      <li><%= link_to "FAQ", welcome_faq_path %></li>
+      <li><%= link_to "Pricing", welcome_pricing_path %></li>
+      <li><%= link_to "Invoices", invoices_path %></li>
+      <li><%= link_to "Contact", welcome_contact_path %></li>
+      <li><%= link_to "Login", root_path %></li>
+  </ul>
 
+<p class="notice"><% notice %></p>
+<p class="alert"><% alert %></p>
+
+<%= yield %>
+</div> <!-- Closes Containter-->
 </body>
 </html>
